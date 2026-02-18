@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        h2{
+            background-color:sienna;
+            text-align: center;
+            padding:10px;
+        }
+        body{
+            background-color: bisque;
+        }
+        form{
+            margin-left: 300px;
+            margin-right: 400px;
+            padding:20px;
+            background-color:aliceblue;
+            align-content: center;
+        }
+        .a{
+            background-color:green ;
+        }
+        .b{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>BMI CALCULATOR</h2>
+<form onsubmit="event.preventDefault()">
+    <label for="age">Age</label>
+    <input type="number" id="age" name="age" min="2" max="120">
+    <br><br>
+
+    <label>Gender :</label>
+    <input type="radio" id="Female" name="Gender" value="Female">
+    <label for="Female">Female</label>
+    <input type="radio" id="Male" name="Gender" value="Male">
+    <label for="Male">Male</label>
+    <br><br>
+
+    <label for="height">Height (in meters)</label>
+    <input type="number" id="height" step="0.01">
+    <br><br>
+
+    <label for="weight">Weight (in kg)</label>
+    <input type="number" id="weight">
+    <br><br>
+
+    <button type="button" class="a" onclick="bmiObj.calculate(height, weight)">Calculate</button>
+    <button type="button" class="b" onclick="bmiObj.clear()">Clear</button>
+
+    <h3 id="result"></h3>
+</form>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
