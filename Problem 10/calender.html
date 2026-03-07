@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+    <style>
+        body{
+            text-align: center;
+            background-color:blanchedalmond;
+        }
+        table, th, td {
+            border-radius: 5pt;
+            border-style: solid;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 20px;
+            margin: 0px auto;
+            padding: 15px 20px 15px 20px;
+        }
+        th, td{
+            height: 50px;
+            width: 50px;
+        }
+        th{
+            background-color: cadetblue;
+        }
+        select{
+            width: 200px;
+            height: 40px;
+        }
+        select:hover{
+            background-color: skyblue;
+        }
+        td:hover{
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="calender.showCal()">
+    <h1>CALENDER</h1>
+    <br><br><br>
+    <label for="month">Month</label>
+    <select id="month" onchange="calender.showCal()">
+        <option value="0">January</option>
+        <option value="1">February</option>
+        <option value="2">March</option>
+        <option value="3">April</option>
+        <option value="4">May</option>
+        <option value="5">June</option>
+        <option value="6">July</option>
+        <option value="7">August</option>
+        <option value="8">September</option>
+        <option value="9">October</option>
+        <option value="10">November</option>
+        <option value="11">December</option>
+    </select>
+    <label for="year">Year</label>
+    <select id="year" onchange="calender.showCal()">
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+    </select>
+    <br><br><br>
+    <table id="cal"></table>
+    <script src="script.js"></script>
+</body>
+</html>
