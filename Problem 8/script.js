@@ -11,5 +11,4 @@ function form1() {
     } else {
         alert("Enter a valid name");
     }
-    name.value = ""
 }
